@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample_Cap_OpenCV-2010", "Sample_Cap_OpenCV\Sample_Cap_OpenCV-2010.vcxproj", "{42F1B46D-A7DC-45D0-8F3F-00F5723B3E58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42F1B46D-A7DC-45D0-8F3F-00F5723B3E58}.Debug|Win32.ActiveCfg = Debug|Win32
+		{42F1B46D-A7DC-45D0-8F3F-00F5723B3E58}.Debug|Win32.Build.0 = Debug|Win32
+		{42F1B46D-A7DC-45D0-8F3F-00F5723B3E58}.Release|Win32.ActiveCfg = Release|Win32
+		{42F1B46D-A7DC-45D0-8F3F-00F5723B3E58}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
