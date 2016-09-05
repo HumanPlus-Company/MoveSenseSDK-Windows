@@ -16,8 +16,11 @@ public:
 	//关闭相机
 	void CloseCamera();
 	
-	//读取图片
-	int GetImageData(unsigned char * &data, int &len);
+	//获取一帧图像： 1 -- 正常获取， 0 -- 获取失败，可跳过当前帧， -1 超时，超时的时间为形参ms，单位为毫秒
+	int GetImageData(unsigned char * &data, int &len, unsigned long ms = 0xFFFFFFF);
+
+	//室外去天空噪点算法开关
+	void setSkyFilter(bool onoff);
 	//设置曝光和增益 0-255
 	void SetGainValue(int value);
 
@@ -43,8 +46,6 @@ public:
 	void SetHDR(bool onoff);
 
 	void SetUndistort(bool onoff);
-
-
 
 	void SetCameraMode(CameraMode cameraMode);
 	CameraMode GetCameraMode();

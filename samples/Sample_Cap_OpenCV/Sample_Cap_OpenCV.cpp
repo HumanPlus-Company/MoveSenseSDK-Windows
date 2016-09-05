@@ -20,7 +20,7 @@ void TestCase_752X480_LR()
 
 	while(1)
 	{
-		c.GetImageData(img_data ,len);
+		c.GetImageData(img_data ,len,1);
 		if(len>0)
 		{
 			cv::Mat left(height,width,CV_8UC1),right(height,width,CV_8UC1);
@@ -58,8 +58,8 @@ void TestCase_752X480_LD()
 
 	while(1)
 	{
-		c.GetImageData(img_data ,len);
-		if(len > 0)
+		int ret = c.GetImageData(img_data,len);
+		if(ret > 0)
 		{
 			cv::Mat left(height,width,CV_8UC1),disp(height,width,CV_8UC1);
 			for(int i = 0 ; i < height; i++)
@@ -72,6 +72,9 @@ void TestCase_752X480_LD()
 			char key = cv::waitKey(10);
 			if(key == 'q')
 			 break;
+		}else if(ret == -1)
+		{
+			std::cout<< "time out" <<std::endl;
 		}
 	}
 	c.CloseCamera();
@@ -164,6 +167,7 @@ void TestCase_376X240_LD()
 		std::cout << "Open Camera Failed!" << std::endl;
 		return;
 	}
+	
 
 	int width  = 376;
 	int height = 240;
@@ -232,7 +236,7 @@ void TestCase_376X240_LRD() // only surport usb3.0 now
 	delete img_data;
 }
 
-#define TEST_CASE 1  
+#define TEST_CASE 2  
 
 int main()
 {
